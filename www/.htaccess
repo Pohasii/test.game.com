@@ -1,0 +1,14 @@
+AddDefaultCharset UTF-8 
+Options -Indexes 
+RewriteEngine on 
+RewriteCond	%{REQUEST_URI}	!controller/*
+RewriteCond	%{REQUEST_URI}	!champions/*
+RewriteCond	%{REQUEST_URI}	!view/*
+RewriteCond	%{REQUEST_URI}	!img/*
+RewriteCond	%{REQUEST_URI}	!style/
+RewriteCond	%{REQUEST_URI}	!robots.txt
+RewriteCond	%{REQUEST_URI}	!humans.txt
+RewriteCond	%{REQUEST_URI}	!sitemap.xml
+RewriteCond	%{REQUEST_URI}	!favicon.*
+RewriteCond	%{REQUEST_URI}	!index.php
+RewriteRule	^(.*)$	index.php?alpha=$1 [QSA]
